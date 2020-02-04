@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "48041273",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "48041274",
+      "name": "左",
+      "font_class": "xiangzuo",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "48041275",
+      "name": "影音教材",
+      "font_class": "yingyinjiaocai",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "48041276",
+      "name": "房子",
+      "font_class": "home",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "48041277",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "48041278",
+      "name": "小组",
+      "font_class": "xiaozu",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "48041279",
+      "name": "电影",
+      "font_class": "dianying",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "48041280",
+      "name": "更多，三个点",
+      "font_class": "gengduosangedian_",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    }
+  ]
+}
