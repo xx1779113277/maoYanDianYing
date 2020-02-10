@@ -4,15 +4,28 @@ import VueRouter from 'vue-router'
 import Home from '../components/home/home.vue'
 import Audio from '../components/audio/audio.vue'
 import Mine from '../components/mine/mine.vue'
+import Details from '../components/detaild/index.vue'
 
 Vue.use(VueRouter)
 
 let router = new VueRouter({
+  mode: 'history',
   routes: [
-    { path: '/home', component: Home },
+    { 
+      path: '/home', 
+      name: 'home', 
+      meta: { keepAlive: true },
+      component: Home 
+    },
     { path: '/audio', component: Audio },
     { path: '/mine', component: Mine },
-    { path: '/*', component: Home }
+    { 
+      path: '/details/:data', 
+      name: 'details',
+      meta: { keepAlive: false },
+      component: Details 
+    },
+    { path: '/*', meta: { keepAlive: true }, component: Home }
   ]
 })
 
