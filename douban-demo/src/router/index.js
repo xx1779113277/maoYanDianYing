@@ -9,11 +9,10 @@ import Details from '../components/detaild/index.vue'
 Vue.use(VueRouter)
 
 let router = new VueRouter({
-  mode: 'history',
   routes: [
     { 
-      path: '/home', 
-      name: 'home', 
+      path: '/home',
+      name: 'home',
       meta: { keepAlive: true },
       component: Home 
     },

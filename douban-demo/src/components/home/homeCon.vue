@@ -114,29 +114,25 @@ export default {
 .home-con {
   margin-top: 0.12rem;
   height: 100%;
-  width: 3.75rem;
+  width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
 
   .swp {
     width: 3.4rem;
     height: 2.16rem;
-    // overflow-y: hidden;
     p {
       font-size: 14px;
       color: black;
       margin-bottom: 0.12rem;
     }
     .con {
-      width: 3.4rem;
-      height: 1.75rem;
       overflow: scroll;
-      overflow-y: hidden;
+      background: #fff;
       .conSwp {
-        background: white;
-        display: inline;
         white-space: nowrap;
         section {
           display: inline-block;
@@ -170,16 +166,16 @@ export default {
     background: #eee;
   }
   .con-ul {
-    width: 3.4rem;
-    display: flex;
-    flex-direction: column;
+    width: 3.45rem;
+    height: auto;
+    
     .con-li {
-      width: 3.4rem;
-      height: 1.24rem;
+      width: 3.45rem;
+      height: 1.2rem;
       display: flex;
       box-sizing: border-box;
-      padding-top: 0.12rem;
-      padding-bottom: 0.12rem;
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
       img {
         width: 0.7rem;
         height: 1rem;

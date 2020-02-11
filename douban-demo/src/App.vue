@@ -13,7 +13,17 @@
 export default {
   created() {
     this.$router.push("/home");
-  }
+  },
+  // 处理导航栏无法直接访问路由
+  mounted(){
+    window.addEventListener('hashchange',()=>{
+      var currentPath = window.location.hash.slice(1); // 获取输入的路由
+      if(this.$router.path !== currentPath){
+        this.$router.push(currentPath); // 动态跳转
+      }
+    },false);
+}
+
 };
 </script>
 
@@ -21,13 +31,14 @@ export default {
 #app {
   width: 100%;
   height: 100%;
+    background: #fff;
+
   .app-a {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: #fff;
   }
 }
 </style>

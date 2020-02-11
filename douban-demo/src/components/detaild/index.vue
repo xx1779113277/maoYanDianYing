@@ -101,12 +101,12 @@ export default {
     }
   }
   .content {
-    width: 3.75rem;
+    width: 100%;
     height: 3.6rem;
     background: rgba(100, 100, 100, 0.9);
 
     .background {
-      width: 3.75rem;
+      width: 100%;
       height: 2rem;
       display: flex;
 

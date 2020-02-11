@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Header from '../header/index'
-import Tabbar from '../tabbar/index'
+import Header from '../view/header'
+import Tabbar from '../view/tabbar'
 
 export default {
     data() {

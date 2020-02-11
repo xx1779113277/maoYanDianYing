@@ -20,6 +20,7 @@
             <!-- end -->
 
             <HomeCon :data="data" :updata="updata" @changePage='changePage' />
+
         </div>
 
         <Tabbar :isPage="isPage" />
@@ -27,9 +28,9 @@
 </template>
 
 <script>
-import Header from '../header/index'
+import Header from '../view/header'
 import HomeCon from './homeCon'
-import Tabbar from '../tabbar/index'
+import Tabbar from '../view/tabbar'
 
 export default {
     data() {
@@ -120,7 +121,7 @@ export default {
     overflow: auto;
 }
 .home-nav {
-    width: 3.75rem;
+    width: 100%;
     height: 0.45rem;
     padding: 0 0.15rem;
     border-bottom: 1px solid #ccc;
@@ -135,9 +136,13 @@ export default {
         font-size: 15px;
         font-weight: bold;
         .nav-tabar-a {
+            display: block;
             padding: 0 0.12rem;
             height: 0.45rem;
             line-height: 0.45rem;
+        }
+        .active{
+            color: #42bd56;
         }
     }
 
@@ -147,23 +152,7 @@ export default {
         font-weight: bold;
     }
 
-    .active{
-        color: #42bd56;
-        position: relative;
-        transition: .3s;
-        box-sizing: border-box;
-        border-bottom: 1px solid #42bd56;
-    }
-    // .active:after {
-    //     content: '';
-    //     width: 0.8rem;
-    //     padding: 0.01rem;
-    //     background: #42bd56;
-    //     position: absolute;
-    //     bottom: 0;
-    //     margin-left: -85%;
-
-    // }
+    
 }
 </style>
 
