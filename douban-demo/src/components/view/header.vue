@@ -22,8 +22,6 @@ export default {
     height: 0.5rem;
     background: #42bd56;
     line-height: 0.5rem;
-    opacity: 0.8;
-    padding: 0 0.2rem;
     display: flex;
     justify-content: center;
     color: #fff;

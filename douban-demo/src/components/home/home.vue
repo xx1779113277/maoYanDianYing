@@ -35,7 +35,7 @@ import Tabbar from '../view/tabbar'
 export default {
     data() {
         return {
-            isPage: { icon: '&#xe69c;', name: '豆瓣电影', mark: 'home' },
+            isPage: { icon: '&#xe61e;', name: '豆瓣电影', mark: 'home' },
             navTabList: [
                 { 
                     name: '正在热映', id: 0, page: 0, api: 'one', 

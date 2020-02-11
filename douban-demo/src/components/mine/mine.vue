@@ -2,7 +2,7 @@
     <div class="app-a">
         <Header :isPage="isPage" />
         
-        <div class="content"></div>
+        <Content />
 
         <Tabbar :isPage="isPage" />
     </div>
@@ -11,6 +11,7 @@
 <script>
 import Header from '../view/header'
 import Tabbar from '../view/tabbar'
+import Content from './view/content'
 
 export default {
     data() {
@@ -20,7 +21,8 @@ export default {
     },
     components: {
         Header,
-        Tabbar
+        Tabbar,
+        Content
     }
 }
 </script>
