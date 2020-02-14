@@ -2,7 +2,7 @@
     <div class="app_header">
 
         <div class="app_header_left">
-            <span class="iconfont" v-html="isPage.icon"></span>{{ isPage.name }}
+            {{ isPage.name }}
         </div>
         
     </div>
@@ -25,7 +25,7 @@ export default {
     display: flex;
     justify-content: center;
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     .iconfont {
         margin-right: 0.05rem;
         color: #fff;

@@ -2,7 +2,7 @@
     <div class="app-a">
         <Header :isPage="isPage" />
         
-        <Content />
+        <router-view></router-view>
 
         <Tabbar :isPage="isPage" />
     </div>
@@ -11,19 +11,21 @@
 <script>
 import Header from '../view/header'
 import Tabbar from '../view/tabbar'
-import Content from './view/content'
 
 export default {
     data() {
         return {
-            isPage: { icon: '&#xe66e;', name: '豆瓣我的', mark: 'mine' },
+            isPage: { name: '豆瓣我的', mark: 'mine' },
         }
     },
     components: {
         Header,
-        Tabbar,
-        Content
-    }
+        Tabbar
+    },
+    created() {
+        this.$router.push('/minelogin')
+        this.isPage.name = '登录'
+    },
 }
 </script>
 

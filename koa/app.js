@@ -5,6 +5,7 @@ const path = require('path')
 const static = require('koa-static')   //静态资源服务插件
 const staticPath = './static/home/dist'       //根基自己的目录配置文件路径
 const cors = require("koa2-cors");//导入跨域模块
+const mongoose = require('mongoose')
 
 // 实例化
 const app = new koa()
@@ -29,7 +30,22 @@ app.use(cors({
     allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
+// 安装post
 app.use(bodyParser());
+
+// 连接数据库
+const db = require('./config/keys').mongoURI
+mongoose.connect(
+    db,
+    { useUnifiedTopology: true })
+    .then(() => {
+        console.log('链接成功')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+
+
 // 配置静态web服务的中间件
 app.use(static(
     path.join( __dirname,  staticPath)
@@ -37,7 +53,6 @@ app.use(static(
 
 // 引入users路由
 const usersRouter = require('./router/users')
-
 // 配置路由地址
 router.use('/user', usersRouter)
 
