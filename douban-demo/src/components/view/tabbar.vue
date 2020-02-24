@@ -39,7 +39,24 @@ export default {
   methods: {
     // 跳转路由页面
     toPage(mark) {
-      (this.$router.push(`/${mark}`))
+      // 判断是不是在当前页, 是就不执行跳转
+      if(this.$route.name !== mark) {
+        // 判断是不是跳转到mine页面
+        if(mark === 'mine') {
+          // 验证是否处于登录状态
+          var islogin = window.localStorage.islogin
+          window.console.log(islogin)
+          if(islogin !== '' && islogin !== null && islogin !== undefined)  {
+            this.$router.push(`/mineindex`)
+          }else {
+            // 否则跳转到登录页
+            this.$router.push(`/minelogin`)
+          }
+          
+        }else {
+          this.$router.push(`/${mark}`)
+        }
+      }
     }
   },
 };

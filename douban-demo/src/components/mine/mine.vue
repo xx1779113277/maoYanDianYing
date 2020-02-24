@@ -21,11 +21,7 @@ export default {
     components: {
         Header,
         Tabbar
-    },
-    created() {
-        this.$router.push('/minelogin')
-        this.isPage.name = '登录'
-    },
+    }
 }
 </script>
 

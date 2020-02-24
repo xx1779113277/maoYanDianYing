@@ -8,6 +8,7 @@ import Details from '../components/detaild/index.vue'
 import MineLogin from '../components/mine/view/login.vue'
 import MineIndex from '../components/mine/view/index.vue'
 
+
 Vue.use(VueRouter)
 
 let router = new VueRouter({
@@ -18,11 +19,16 @@ let router = new VueRouter({
       meta: { keepAlive: true },
       component: Home 
     },
-    { path: '/audio', component: Audio },
-    { path: '/mine', component: Mine, children: [
-      { path: '/minelogin', component: MineLogin },
-      { path: '/mineindex', component: MineIndex }
-    ] },
+    { 
+      path: '/audio', name: 'audio', component: Audio 
+    },
+    { 
+      path: '/mine', name: 'mine', component: Mine, 
+      children: [
+        { path: '/mineindex', component: MineIndex },
+        { path: '/minelogin', component: MineLogin }
+      ] 
+    },
     { 
       path: '/details/:data', 
       name: 'details',

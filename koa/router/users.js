@@ -58,7 +58,7 @@ router.post('/login', async cxt => {
 
     // 查询数据库中用户名存不存在
     const findUsername = await User.find({ username: cxt.request.body.username })
-
+    console.log(findUsername)
     if(findUsername.length === 0) {
         cxt.body = {
             ok: false,
@@ -83,8 +83,8 @@ router.post('/login', async cxt => {
             }
         }else {
             cxt.body = {
-                'msg': 'false',
-                'data': '用户名与密码不匹配'
+                ok: false,
+                msg: '用户名与密码不匹配',
             }
         }
     }
@@ -113,7 +113,16 @@ router.post('/register', async cxt => {
         // 添加到数据库
         await newUser.save()
             .then(user => {
-                cxt.body = user
+                // 验证通过返回token    格式jwt.sign({ 传递的数据 }, 产生token的私钥, { expiresIn: 过期时间 })
+                const payload = { username: data.username,  avatar: data.avatar }
+                var token = tools.jwtSign(payload)
+
+                cxt.body = {
+                    ok: true,
+                    msg: '注册成功',
+                    'token': token,
+                    user
+                }
             })
             .catch( err => {
                 console.log(err)

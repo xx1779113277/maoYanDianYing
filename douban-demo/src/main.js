@@ -13,6 +13,7 @@ Vue.prototype.$axios = axios
 
 Vue.use(Mint);
 
+
 Vue.config.productionTip = false
 
 new Vue({
