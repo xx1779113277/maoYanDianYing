@@ -150,7 +150,7 @@ export default {
             if(data.ok) {
               MessageBox("提示", data.msg);
               this.$router.push('/mineindex')
-              window.localStorage.islogin = data.token
+              window.localStorage.setItem('islogin', data.token)
             }else {
               MessageBox("提示", data.msg);
             }

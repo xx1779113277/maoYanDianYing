@@ -25,15 +25,39 @@
         <div class="discount">
             <a href="">优惠卷</a>
             <a href="">折扣卡</a>
+            <a @click="toOff">退出登录</a>
+
+            <mt-actionsheet
+                :actions="actions"
+                v-model="sheetVisible">
+            </mt-actionsheet>
+
         </div>
     </div>
 </template>
 
 <script>
+import { Actionsheet } from 'mint-ui';
+
 export default {
     data() {
         return {
+            actions: [
+                { name: '退出登录', method: this.off }
+            ],
+            sheetVisible: false,
             headerImg: require('../../../assets/9d89b1e45a5b7fd309b28b5f55269c3912416.png')
+        }
+    },
+    methods: {
+        // 去退出
+        toOff() {
+            this.sheetVisible = !this.sheetVisible
+        },
+        // 退出登录
+        off() {
+            window.localStorage.removeItem('islogin')
+            this.$router.push('/empty')
         }
     },
 }

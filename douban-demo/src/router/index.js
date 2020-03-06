@@ -5,6 +5,7 @@ import Home from '../components/home/home.vue'
 import Audio from '../components/audio/audio.vue'
 import Mine from '../components/mine/mine.vue'
 import Details from '../components/detaild/index.vue'
+import Empty from '../components/view/empty.vue'
 import MineLogin from '../components/mine/view/login.vue'
 import MineIndex from '../components/mine/view/index.vue'
 
@@ -35,6 +36,7 @@ let router = new VueRouter({
       meta: { keepAlive: false },
       component: Details 
     },
+    { path: '/empty', component: Empty },
     { path: '/*', meta: { keepAlive: true }, component: Home }
   ]
 })
